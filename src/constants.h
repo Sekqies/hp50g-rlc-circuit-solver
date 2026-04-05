@@ -1,0 +1,4 @@
+#define MAXIMUM_NODES 32
+#define MAXIMUM_COMPONENTS 32
+
+#define NULL_VALUE 255u
