@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#include <complex.h>
 
 typedef enum{
     RESISTOR,
@@ -33,7 +33,7 @@ typedef struct {
      * - VOLTAGE_SRC: Voltage in Volts (V)
      * - CURRENT_SRC: Current in Amperes (A)
      */
-    double value;
+    double complex value;
     uint8_t type;
 
     uint8_t node_pos;
@@ -46,7 +46,7 @@ typedef struct {
     bool is_target;
 } Component;
 
-Component add_independent_component(ComponentType type, double value, uint8_t node_neg, uint8_t node_pos, bool is_target);
+Component add_independent_component(ComponentType type, double complex value, uint8_t node_neg, uint8_t node_pos, bool is_target);
 
-Component add_component(ComponentType type, double value, uint8_t node_neg, uint8_t node_pos, uint8_t control_node_pos, uint8_t control_node_neg, uint8_t control_id, bool is_target);
+Component add_component(ComponentType type, double complex value, uint8_t node_neg, uint8_t node_pos, uint8_t control_node_pos, uint8_t control_node_neg, uint8_t control_id, bool is_target);
 

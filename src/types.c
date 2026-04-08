@@ -2,7 +2,7 @@
 #include "constants.h"
 
 
-Component add_independent_component(ComponentType type, double value, uint8_t node_neg, uint8_t node_pos, bool is_target){
+Component add_independent_component(ComponentType type, double complex value, uint8_t node_neg, uint8_t node_pos, bool is_target){
     Component comp;
     comp.type = type;
     comp.value = value;
@@ -15,7 +15,7 @@ Component add_independent_component(ComponentType type, double value, uint8_t no
     return comp;
 }
 
-Component add_component(ComponentType type, double value, uint8_t node_neg, uint8_t node_pos, uint8_t control_node_pos, uint8_t control_node_neg, uint8_t control_id, bool is_target){
+Component add_component(ComponentType type, double complex value, uint8_t node_neg, uint8_t node_pos, uint8_t control_node_pos, uint8_t control_node_neg, uint8_t control_id, bool is_target){
     Component comp = add_independent_component(type,value,node_neg,node_pos,is_target);
     comp.control_node_neg = control_node_neg;
     comp.control_node_pos = control_node_pos;
@@ -25,3 +25,4 @@ Component add_component(ComponentType type, double value, uint8_t node_neg, uint
 
 
 
+ 
